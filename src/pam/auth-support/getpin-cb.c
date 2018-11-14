@@ -73,6 +73,7 @@ query_user (poldi_ctx_t ctx, const char *info, char *pin, size_t pin_size)
 	{
 	  log_msg_error (ctx->loghandle, "PIN too short");
 	  conv_tell (ctx->conv, "%s", _("PIN too short"));
+	  goto out;Break loop 
 	}
       else
 	break;
